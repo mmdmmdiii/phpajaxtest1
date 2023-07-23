@@ -1,0 +1,57 @@
+.ntickerrec-ctar {
+}
+.ntickerrec-ctar .ntickerrec-menu {
+	padding:5px 10px;
+	background-color:#fff;
+	margin-bottom:0;
+}
+.ntickerrec-ctar .ntickerrec-menu li a {
+	padding-top:6px;
+	padding-bottom:6px;
+}
+.ntickerrec-ctar .ntickerrec-menu .btn-close {
+	position:relative;
+	left:6px;
+	background:none;
+	border-color:transparent;
+	opacity:0.5;
+}
+.ntickerrec-ctar .ntickerrec-menu .btn-close .glyphicon {
+	position:relative;
+	top:3px;
+}
+.ntickerrec-ctar .ntickerrec-menu .btn-close:hover {
+	opacity:1;
+	background-color:#eee;
+}
+.ntickerrec-ctar .ntickerrec-content {
+}
+.ntickerrec-ctar .ntickerrec-content .ntickerrec-tab-content {
+	display:none;
+}
+.ntickerrec-ctar .ntickerrec-content .ctar-preview {
+	overflow:auto;
+
+	/* checkerboard */
+	background-color:white;
+	background-image:linear-gradient(45deg, #eee 25%, transparent 25%, transparent 75%, #eee 75%, #eee),
+		linear-gradient(45deg, #eee 25%, transparent 25%, transparent 75%, #eee 75%, #eee);
+	background-size:16px 16px;
+	background-position:0 0, 8px 8px;
+}
+.ntickerrec-ctar .ntickerrec-content .ctar-preview-disabled,
+.ntickerrec-ctar .ntickerrec-content .ctar-preview-jsblocked {
+	display:none;
+	padding:10px;
+	text-align:center;
+	font-size:100%;
+	color:red;
+}
+/*-- notes --*/
+.note-cnt-ctar {
+	margin-right:10px;
+	text-align:right;
+	color:#888;
+	font-size:90%;
+}
+

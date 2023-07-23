@@ -1,0 +1,86 @@
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_cfgdb`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_cfgdb` (
+  `cfgdb_id` int(11) NOT NULL AUTO_INCREMENT,
+  `ckey` varchar(40) DEFAULT NULL,
+  `cval` text DEFAULT NULL,
+  PRIMARY KEY (`cfgdb_id`),
+  UNIQUE KEY `ckey` (`ckey`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1002 ;
+
+--
+-- Dumping data for table `tbl_cfgdb`
+--
+
+INSERT INTO `tbl_cfgdb` (`cfgdb_id`, `ckey`, `cval`) VALUES
+(1001, 'cfgapp', '{"tbl:user:default-page-size":10,"tbl:user:default-sort-val":"dt_create:asc","tbl:user:default_time_zone":"UTC","tbl:nticker:default-page-size":10,"tbl:nticker:default-sort-val":"dt_create:desc"}');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_nticker`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_nticker` (
+  `nticker_id` int(11) NOT NULL AUTO_INCREMENT,
+  `dt_create` datetime NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `group_id` int(11) NOT NULL,
+  `pinidx` tinyint(4) NOT NULL DEFAULT '0',
+  `title` varchar(100) DEFAULT NULL,
+  `notes` varchar(200) DEFAULT NULL,
+  `dt_end` datetime DEFAULT NULL,
+  `idata` text DEFAULT NULL,
+  `iarea` text DEFAULT NULL,
+  `istyle` text DEFAULT NULL,
+  PRIMARY KEY (`nticker_id`),
+  KEY `dt_create` (`dt_create`),
+  KEY `user_id` (`user_id`),
+  KEY `group_id` (`group_id`),
+  KEY `pinidx` (`pinidx`),
+  KEY `title` (`title`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1001 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_user`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_user` (
+  `user_id` int(11) NOT NULL AUTO_INCREMENT,
+  `dt_create` datetime DEFAULT NULL,
+  `group_id` int(11) DEFAULT NULL,
+  `pinidx` tinyint(4) NOT NULL DEFAULT '0',
+  `status` tinyint(4) NOT NULL,
+  `b_admin` tinyint(4) NOT NULL DEFAULT '0',
+  `username` varchar(100) DEFAULT NULL,
+  `passkey` varchar(300) DEFAULT NULL,
+  `sess_exp` datetime DEFAULT NULL,
+  `sess_sig` varchar(100) DEFAULT NULL,
+  `first_name` varchar(50) DEFAULT NULL,
+  `last_name` varchar(50) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `notes` varchar(200) DEFAULT NULL,
+  `time_zone` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`user_id`),
+  KEY `dt_create` (`dt_create`),
+  KEY `group_id` (`group_id`),
+  KEY `pinidx` (`pinidx`),
+  KEY `status` (`status`),
+  KEY `username` (`username`),
+  KEY `sess_sig` (`sess_sig`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1002 ;
+
+--
+-- Dumping data for table `tbl_user`
+--
+
+INSERT INTO `tbl_user` (`user_id`, `dt_create`, `group_id`, `pinidx`, `status`, `b_admin`, `username`, `passkey`, `sess_exp`, `sess_sig`, `first_name`, `last_name`, `email`, `notes`, `time_zone`) VALUES
+(1001, '2000-01-01 00:00:00', 1001, 1, 1, 1, 'admin', 'password', NULL, NULL, NULL, NULL, NULL, NULL, 'UTC');
+
+

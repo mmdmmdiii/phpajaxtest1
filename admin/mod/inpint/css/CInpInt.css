@@ -1,0 +1,35 @@
+/*css
+//==>>>==>>>==>>>==>>>==>>>==>>>==>>>==>>>==>>>==>>>==>>>==>>>==>>>
+//
+// AjaxNewsTicker v1.05
+// Copyright (c) phpkobo.com ( http://www.phpkobo.com/ )
+// Email : admin@phpkobo.com
+// ID : SNTQK-105
+// URL : http://www.phpkobo.com/ajax-news-ticker
+//
+// This software is free software; you can redistribute it and/or
+// modify it under the terms of the GNU General Public License
+// as published by the Free Software Foundation; version 2 of the
+// License.
+//
+//==<<<==<<<==<<<==<<<==<<<==<<<==<<<==<<<==<<<==<<<==<<<==<<<==<<<
+*/
+
+.inpint-ctar {
+	display:table;
+}
+.inpint-cell {
+	display:table-cell;
+	vertical-align:top;
+}
+.inpint-minus {
+	margin-left:4px;
+	border-radius:4px 0 0 4px;
+}
+.inpint-plus {
+	border-radius:0 4px 4px 0;
+}
+.inpint-ctar span.glyphicon {
+	text-shadow:1px 1px 1px #888;
+}
+

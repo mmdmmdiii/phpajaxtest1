@@ -1,0 +1,31 @@
+<?php
+//==>>>==>>>==>>>==>>>==>>>==>>>==>>>==>>>==>>>==>>>==>>>==>>>==>>>
+//
+// AjaxNewsTicker v1.05
+// Copyright (c) phpkobo.com ( http://www.phpkobo.com/ )
+// Email : admin@phpkobo.com
+// ID : SNTQK-105
+// URL : http://www.phpkobo.com/ajax-news-ticker
+//
+// This software is free software; you can redistribute it and/or
+// modify it under the terms of the GNU General Public License
+// as published by the Free Software Foundation; version 2 of the
+// License.
+//
+//==<<<==<<<==<<<==<<<==<<<==<<<==<<<==<<<==<<<==<<<==<<<==<<<==<<<
+
+$mods = array();
+
+$mods["setup"] = array(
+	"vrtp"=>"/^$/",
+);
+
+$mods["btpl"] = array(
+	"dir"=>"../../" . CEnv::get("dir-admin") . "/mod/btpl",
+);
+
+$mods["fbc"] = array(
+	"dir"=>"../../" . CEnv::get("dir-admin") . "/mod/fbc",
+);
+
+?>
